@@ -1,0 +1,55 @@
+@import "../../variables.scss";
+.referal {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.75rem;
+  .referalCode {
+    color: $colorPrimary;
+    .codeBtn {
+      display: flex;
+      padding-left: 5px;
+      margin-top: 5px;
+      background: $colorWhite;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.75rem;
+      font-weight: $fontWeight500;
+      font-size: $textMedium;
+      cursor: copy;
+      line-height: 24px;
+      height: 3.125rem;
+      border: 1.75px solid $btnBackground;
+      border-radius: $borderRadius10;
+    }
+  }
+  .balance {
+    padding: 1.25rem;
+    color: $colorPrimary;
+    border-radius: $borderRadius20;
+    font-weight: $fontWeight400;
+    background: $colorWhite;
+    font-size: $textSmall;
+    @media screen and (max-width: 768px) {
+      padding: 1.25rem 1.75rem;
+    }
+    box-shadow: 0px 2px 8px rgba(128, 0, 128, 0.15);
+    .amount {
+      color: $darkColor;
+    }
+  }
+}
+.cardTitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  color: #800080;
+  .cardNum {
+    color: #000000;
+    font-size: $textMedium;
+    font-size: 200;
+  }
+}

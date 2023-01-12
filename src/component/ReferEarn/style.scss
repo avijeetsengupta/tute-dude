@@ -1,0 +1,18 @@
+@import "../variables.scss";
+
+.referEarn {
+  padding: 0 11rem;
+  @media screen and (max-width: 768px) {
+    padding: 1rem 2.125rem;
+  }
+  .referTitle {
+    margin-top: 20px;
+    .referName {
+      transition: 0.3s ease-out;
+      cursor: pointer;
+      &:hover {
+        color: $colorPrimary;
+      }
+    }
+  }
+}

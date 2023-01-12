@@ -1,0 +1,100 @@
+.referSection {
+  margin-top: 55px;
+  display: flex;
+
+  justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .referBox {
+    background: #ffffff;
+    box-shadow: 0px 3px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 1.2rem 1.25rem;
+    width: 486px;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+    .referNames {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.75rem;
+      @media screen and (max-width: 768px) {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+      .referName {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #800080;
+        .referAmt {
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 48px;
+          color: #000000;
+        }
+      }
+      .withDrawBtn {
+        margin-left: 130px;
+        @media screen and (max-width: 768px) {
+          margin-left: 0;
+          width: 100%;
+        }
+        // grid-column: span 2;
+        // margin-top: 30px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background: #800080;
+        border-radius: 20px;
+        padding: 8px 16px;
+        width: 180px;
+        cursor: pointer;
+        height: 40px;
+        color: #ffffff;
+      }
+    }
+  }
+  .referCode {
+    .referCodeTile {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      color: #800080;
+      .referCode {
+        position: relative;
+        margin-top: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          cursor: copy;
+          border-radius: 10px; /*1*/
+          border: 2px solid transparent; /*2*/
+          background: linear-gradient(270deg, #800080 0%, #ff864c 100%) border-box; /*3*/
+          -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor; /*5'*/
+          mask-composite: exclude; /*5*/
+        }
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 1.5em;
+        width: 358px;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          letter-spacing: 0.3em;
+        }
+        height: 60px;
+      }
+    }
+  }
+}

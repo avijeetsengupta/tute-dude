@@ -1,0 +1,76 @@
+@import "../variables.scss";
+
+.topbar {
+  padding: 1rem 4rem;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    cursor: pointer;
+  }
+  .navigation {
+    height: 100%;
+    .navlinks {
+      display: flex;
+      list-style: none;
+      gap: 1.875rem;
+      .navItems {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        font-weight: $fontWeight500;
+        color: $colorTransparent;
+        cursor: not-allowed;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+      .navItems:last-child {
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          color: $colorPrimary;
+          height: 100%;
+          font-weight: $fontWeight500;
+          font-size: $textLarge;
+          cursor: pointer;
+          transition: 0.3s ease-out;
+          &:hover {
+            border-bottom: 3px solid #800080;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          display: flex;
+          div {
+            display: flex;
+            height: 2.5rem;
+            gap: 1rem;
+            background-color: #800080;
+            color: $colorWhite;
+            font-weight: $fontWeight500;
+            font-size: $textLarge;
+            padding: 12px 1rem;
+            border-radius: $borderRadius10;
+            &:hover {
+              border: none;
+            }
+            .downLogo {
+              color: $colorWhite;
+            }
+            .profileLogo {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    padding-left: 0;
+    padding-right: 2.18rem;
+  }
+}

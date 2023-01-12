@@ -1,0 +1,62 @@
+.workSection {
+  margin-top: 40px;
+  .workHead {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+
+    color: #800080;
+  }
+  .workContainer {
+    display: grid;
+    align-items: center;
+    gap: 20px;
+    grid-template-columns: auto auto;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: auto;
+    }
+    .workContent {
+      display: flex;
+      gap: 20px;
+      .img {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 65px;
+        height: 65px;
+        background: rgba(217, 217, 217, 0.25);
+      }
+      .workText {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height */
+
+        color: #000000;
+        .workPara {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+
+          color: #4d4d4d;
+        }
+      }
+    }
+  }
+  .enrolled {
+    font-style: normal;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #800080;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
